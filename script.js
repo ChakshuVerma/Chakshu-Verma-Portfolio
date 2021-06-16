@@ -83,7 +83,7 @@ $(document).ready(function(){
         $('.contact-form').addClass("disable");
 
         $.ajax({
-            url: "message.php",
+            url: "mail.php",
             type: "POST",
             data: "email="+$email+"&subject="+$subject+"&message="+$message,
             success: function(data){
