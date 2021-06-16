@@ -70,9 +70,9 @@ $(document).ready(function(){
         }
     });
 
-    $('.contact-form').submit((e)=>{
-        e.preventDefault(); //preventing from submitting form
-    });
+    // $('.contact-form').submit((e)=>{
+    //     e.preventDefault(); //preventing from submitting form
+    // });
 
     $('.send-msg').click(()=>{
         $fullname = $('.fullname').val();
