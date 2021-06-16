@@ -74,38 +74,38 @@ $(document).ready(function(){
     //     e.preventDefault(); //preventing from submitting form
     // });
 
-    $('.send-msg').click(()=>{
-        $fullname = $('.fullname').val();
-        $email = $('.email-input').val();
-        $subject = $('.subject').val();
-        $message = $('.message').val();
-        $('.send-msg').text("Sending...");
-        $('.contact-form').addClass("disable");
+    // $('.send-msg').click(()=>{
+    //     $fullname = $('.fullname').val();
+    //     $email = $('.email-input').val();
+    //     $subject = $('.subject').val();
+    //     $message = $('.message').val();
+    //     $('.send-msg').text("Sending...");
+    //     $('.contact-form').addClass("disable");
 
-        $.ajax({
-            url: "mail.php",
-            type: "POST",
-            data: "email="+$email+"&subject="+$subject+"&message="+$message,
-            success: function(data){
-                $errorBox = $('.error-box');
-                $('.send-msg').text("Send message");
-                $('.contact-form').removeClass("disable");
-                if(data == "success"){
-                    $fullname = $('.fullname').val("");
-                    $email = $('.email-input').val("");
-                    $subject = $('.subject').val("");
-                    $message = $('.message').val("");
-                    $errorBox.html("Your message has been sent!");
-                    $errorBox.addClass("success");
-                    setTimeout(()=>{
-                        $errorBox.html("");
-                        $errorBox.removeClass("success");
-                    }, 5000);
-                }else{
-                    $errorBox.removeClass("success");
-                    $errorBox.html("<span>* </span>" + data);
-                }
-            }
-        });
-    });
+    //     $.ajax({
+    //         url: "mail.php",
+    //         type: "POST",
+    //         data: "email="+$email+"&subject="+$subject+"&message="+$message,
+    //         success: function(data){
+    //             $errorBox = $('.error-box');
+    //             $('.send-msg').text("Send message");
+    //             $('.contact-form').removeClass("disable");
+    //             if(data == "success"){
+    //                 $fullname = $('.fullname').val("");
+    //                 $email = $('.email-input').val("");
+    //                 $subject = $('.subject').val("");
+    //                 $message = $('.message').val("");
+    //                 $errorBox.html("Your message has been sent!");
+    //                 $errorBox.addClass("success");
+    //                 setTimeout(()=>{
+    //                     $errorBox.html("");
+    //                     $errorBox.removeClass("success");
+    //                 }, 5000);
+    //             }else{
+    //                 $errorBox.removeClass("success");
+    //                 $errorBox.html("<span>* </span>" + data);
+    //             }
+    //         }
+    //     });
+    // });
 });
