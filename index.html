@@ -61,7 +61,8 @@
                 <div class="column right">
                     <div class="text">I'm Chakshu and I'm a <span class="typing-2"></span></div>
                     <p>I completed my high school in 2019. Currently I am in college and pursuing my Computer Science (Honors) degree. Along with my college I spend my time in different activites like programming, development, swimming etc.</p>
-                    <a href="#">Download CV</a>
+                    <a target="_blank" href="#">Download CV</a>
+                    <!-- Add the pdf of resume here -->
                 </div>
             </div>
         </div>
@@ -184,24 +185,24 @@
                 <div class="column right">
                     <div class="text">Message me</div>
 
-                    <form class="contact-form" action="mail.php" method="POST">
+                    <form class="contact-form">
                         <div class="fields">
                             <div class="field name">
-                                <input type="text" class="fullname" placeholder="Name" name="name">
+                                <input type="text" id="name" placeholder="Name" required>
                             </div>
                             <div class="field email">
-                                <input type="text" class="email-input" placeholder="Email" name="email">
+                                <input type="email" id="email" placeholder="Email" required>
                             </div>
                         </div>
                         <div class="field">
-                            <input type="text" class="subject" placeholder="Subject" name="subject">
+                            <input type="text" id="subject" placeholder="Subject" required>
                         </div>
                         <div class="field textarea">
-                            <textarea class="message" cols="30" rows="10" placeholder="Message.." name="message"></textarea>
+                            <textarea id="message" cols="30" rows="10" placeholder="Message.." required></textarea>
                         </div>
                         <div class="button-area">
-                            <button class="send-msg" type="submit" name="send">Send message</button>
-                            <div class="error-box"></div>
+                            <button class="send-msg" type="submit">Send message</button>
+                            <div class="alert" id="alert"></div>
                         </div>
                     </form>
 
@@ -215,8 +216,73 @@
         <span><a href="#">Chakshu Verma</a></span>
     </footer>
 
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase.js"></script>
     <script src="script.js"></script>
-</body>
-</html>
+</body> 
+<script>
+    $(document).ready(function(){
+        $(window).scroll(function(){
+            if(this.scrollY > 20){
+                $('.navbar').addClass("sticky");
+            }else{
+                $('.navbar').removeClass("sticky");
+            }
+            
+            if(this.scrollY > 500){
+                $('.scroll-up-btn').addClass("show");
+            }else{
+                $('.scroll-up-btn').removeClass("show");
+            }
+        });
 
-<!-- START CONTACT FORM SHIT -->
+        $('.scroll-up-btn').click(function(){
+            $('html').animate({scrollTop: 0});
+            $('html').css("scrollBehavior", "auto");
+        });
+
+        $('.navbar .menu li a').click(function(){
+            $('html').css("scrollBehavior", "smooth");
+        });
+
+        $('.menu-btn').click(function(){
+            $('.navbar .menu').toggleClass("active");
+            $('.menu-btn i').toggleClass("active");
+        });
+
+        var typed = new Typed(".typing", {
+            strings: ["Programmer", "Developer", "Designer","Video Editor"],
+            typeSpeed: 100,
+            backSpeed: 60,
+            loop: true
+        });
+
+        var typed = new Typed(".typing-2", {
+            strings: ["Programmer", "Developer", "Designer","Video Editor"],
+            typeSpeed: 100,
+            backSpeed: 60,
+            loop: true
+        });
+
+        $('.carousel').owlCarousel({
+            margin: 20,
+            loop: true,
+            autoplayTimeOut: 2000,
+            autoplayHoverPause: true,
+            responsive: {
+                0:{
+                    items: 1,
+                    nav: false
+                },
+                600:{
+                    items: 2,
+                    nav: false
+                },
+                1000:{
+                    items: 3,
+                    nav: false
+                }
+            }
+        });
+});
+</script>
+</html>

@@ -540,17 +540,17 @@ section .title::after{
   color: crimson;
   background: none;
 }
-.right form .error-box{
+.right form .alert{
   color: crimson;
   text-align: center;
   font-size: 17px;
   border-radius: 5px;
   margin-left: 20px;
 }
-.right form .error-box.success{
+.right form .alert.success{
   color: #27ae60;
 }
-.button .error-box span{
+.button .alert span{
   font-weight: 500;
 }
 /* footer section styling */
@@ -683,7 +683,7 @@ footer span a:hover{
     .contact .right form .email{
         margin: 0;
     }
-    .right form .error-box{
+    .right form .alert{
        width: 150px;
     }
     .scroll-up-btn{
