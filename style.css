@@ -141,7 +141,7 @@ section .title::after{
     text-align: center;
     line-height: 45px;
     color: #fff;
-    z-index: 9999;
+    z-index: 1;
     font-size: 30px;
     border-radius: 6px;
     border-bottom-width: 2px;
@@ -553,7 +553,7 @@ section .title::after{
 .button .alert span{
   font-weight: 500;
 }
-/* footer section styling */
+                                                            /* footer section styling */
 footer{
     background: #111;
     padding: 15px 23px;
