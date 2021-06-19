@@ -259,27 +259,23 @@ section .title::after{
 .services .serv-content{
     justify-content: space-evenly;
 }
-.services, .projects{
-    color:#fff;
-    background: #111;
-}
-.services .title::before{
-    background: #fff;
-}
-.services .title::after{ 
-    background: #111;
+.services .title::after{
     content: "what i provide";
+}
+.services .serv-content .box div{
+    color: #fff;
 }
 .services .serv-content .card{
     width: calc(33% - 20px);
-    background: #222;
+    background: linear-gradient(lightgray, gray, lightgray);
     text-align: center;
     border-radius: 6px;
     padding: 35px 25px;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
 }
 .services .serv-content .card:hover{
+    color: white;
     background: crimson;
 }
 .services .serv-content .card .box{
@@ -378,16 +374,20 @@ section .title::after{
 }
 
                                                             /* Projects styling */
+.projects .title::after{
+    content: "what I have made";
+}
 .projects .carousel .card{
-    background: #222;
+    background: linear-gradient(lightgray, gray, lightgray);
     border-radius: 6px;
     padding: 25px 35px;
     text-align: center;
     overflow: hidden;
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
 }
 .projects .carousel .card:hover{
     background: crimson;
+    color: white;
 }
 .projects .carousel .card .box{
     display: flex;
@@ -413,7 +413,7 @@ section .title::after{
     transition: all 0.3s ease;
 }
 .projects .carousel .card:hover img{
-    border-color: #fff;
+    border-color: none;
 }
 .owl-dots{
     text-align: center;
