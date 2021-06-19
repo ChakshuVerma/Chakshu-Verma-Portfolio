@@ -75,7 +75,6 @@
                 <div class="column left">
                     <div class="text">My Skills.</div>
                     <p>In my journey, I have worked on different technologies and languages whether it be for web development, android development or for competitive programming. These are some of them.</p>
-                    <a href="#">Read more</a>
                 </div>
                 <div class="column right">
                     <div class="bars">
@@ -234,6 +233,10 @@
             }
         });
 
+        $(document).ready(function(){
+            $(this).scrollTop(0);
+        });
+        
         $('.scroll-up-btn').click(function(){
             $('html').animate({scrollTop: 0});
             $('html').css("scrollBehavior", "auto");
