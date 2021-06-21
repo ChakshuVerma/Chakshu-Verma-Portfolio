@@ -587,7 +587,6 @@ footer span a:hover{
     .menu-btn{
         display: block;
         z-index: 999;
-        color: #fff;
     }
     .menu-btn i.active:before{
         content: "\f00d";
@@ -599,7 +598,6 @@ footer span a:hover{
         left: -100%;
         top: 0;
         background: #111;
-        color: #fff;
         text-align: center;
         padding-top: 80px;
         transition: all 0.3s ease;
@@ -611,6 +609,7 @@ footer span a:hover{
         display: block;
     }
     .navbar .menu li a{
+        color: #fff;
         display: inline-block;
         margin: 20px 0;
         font-size: 25px;
