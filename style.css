@@ -334,7 +334,7 @@ section .title::after{
 
                                                             /* Projects styling */
 .projects .title::after{
-    content: "what have i made";
+    content: "what i made";
 }
 .projects .carousel .card{
     background: linear-gradient(lightgray, gray, lightgray);
