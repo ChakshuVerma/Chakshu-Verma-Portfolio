@@ -148,7 +148,7 @@ section .title::after{
     text-align: center;
     line-height: 45px;
     color: #fff;
-    z-index: 1;
+    z-index: 999;
     font-size: 30px;
     border-radius: 6px;
     border-bottom-width: 2px;
@@ -334,7 +334,7 @@ section .title::after{
 
                                                             /* Projects styling */
 .projects .title::after{
-    content: "what I have made";
+    content: "what have i made";
 }
 .projects .carousel .card{
     background: linear-gradient(lightgray, gray, lightgray);
@@ -598,6 +598,7 @@ footer span a:hover{
         left: -100%;
         top: 0;
         background: #111;
+        color: #fff;
         text-align: center;
         padding-top: 80px;
         transition: all 0.3s ease;
