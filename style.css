@@ -608,6 +608,9 @@ footer span a:hover{
     .navbar .menu li{
         display: block;
     }
+    .navbar .menu.active +.menu-btn{
+        color: #fff;
+    }
     .navbar .menu li a{
         color: #fff;
         display: inline-block;
