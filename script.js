@@ -22,7 +22,12 @@ function submitForm(e) {
   let subject = document.getElementById("subject").value;
   let message = document.getElementById("message").value;
 
-  saveContactInfo(name, email, subject, message);
+  var today = new Date();
+  var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+  var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+  var dateTime = date+' '+time;
+
+  saveContactInfo(name, email, subject, message, dateTime);
 
   let alert = document.getElementById('alert');
   alert.innerHTML = 'Your message has been sent successfully';
@@ -34,7 +39,7 @@ function submitForm(e) {
 }
 
 // Save user information to Firebase
-function saveContactInfo(name, email, subject, message) {
+function saveContactInfo(name, email, subject, message, dateTime) {
   let newContactInfo = contactInfo.push();
 
   newContactInfo.set({
@@ -42,6 +47,7 @@ function saveContactInfo(name, email, subject, message) {
     email: email,
     subject: subject,
     message: message,
+    dateTime: dateTime
   });
 }
 
