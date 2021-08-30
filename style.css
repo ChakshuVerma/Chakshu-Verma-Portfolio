@@ -173,8 +173,10 @@ section .title::after{
     height: 100vh;
     color: #000;
     min-height: 500px;
-    background-size: cover;
-    background-attachment: fixed;
+    background: url("./images/Weather_Forcast_App.png");
+    background-repeat:no-repeat;
+    background-size:contain;
+    background-position:center;
     font-family: 'Ubuntu', sans-serif;
 }
 .home .max-width{
@@ -340,6 +342,7 @@ section .title::after{
     background: linear-gradient(lightgray, gray, lightgray);
     border-radius: 6px;
     padding: 25px 35px;
+    height: 350px;
     text-align: center;
     overflow: hidden;
     transition: all 0.2s ease;
