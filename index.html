@@ -56,7 +56,7 @@
             <h2 class="title">About me</h2>
             <div class="about-content">
                 <div class="column left">
-                    <img src="images/Profile_Pic.jpg" alt="Profile Picture">
+                    <img src="images/Profile_Pic.png" alt="Profile Picture">
                 </div>
                 <div class="column right">
                     <div class="text">I'm a <span class="typing-2"></span></div>
@@ -124,9 +124,9 @@
             <div class="carousel owl-carousel">
                 <div class="card">
                     <div class="box">
-                        <img src="images/Weather_Forcast_App.png" alt="Weather Forcast App">
-                        <a href="https://chakshuverma.github.io/Weather_Forcast_App/" target="_blank"><div class="text">Weather Forcast</div></a>
-                        <p>A web app which shows the forcasted weather of a location using maps.</p>
+                        <img src="images/white_board.jpg" alt="Shared Board">
+                        <a href="https://shared-board-chakshuverma.herokuapp.com/" target="_blank"><div class="text">Shared Board</div></a>
+                        <p>A white board that comes handy when you plan with multiple people.</p>
                     </div>
                 </div>
                 <div class="card">
@@ -138,9 +138,9 @@
                 </div>
                 <div class="card">
                     <div class="box">
-                        <img src="images/white_board.jpg" alt="Shared Board">
-                        <a href="https://shared-board-chakshuverma.herokuapp.com/" target="_blank"><div class="text">Shared Board</div></a>
-                        <p>A white board that comes handy when you plan with multiple people.</p>
+                        <img src="images/Weather_Forcast_App.png" alt="Weather Forcast App">
+                        <a href="https://chakshuverma.github.io/Weather_Forcast_App/" target="_blank"><div class="text">Weather Forcast</div></a>
+                        <p>A web app which shows the forcasted weather of a location using maps.</p>
                     </div>
                 </div>
                 <div class="card">
@@ -158,23 +158,36 @@
     <section class="services" id="services">
         <div class="max-width">
             <h2 class="title">My services</h2>
-            <div class="serv-content">
-                <div class="card">
-                    <div class="box">
-                        <i class="fas fa-paint-brush"></i>
-                        <div class="text">Web Design</div>
-                        <p>I have been working on web design for quite some time now and have made projects as well.This very website is an example of that</p>
+                <div class="carousel owl-carousel">
+                    <div class="card">
+                        <div class="box">
+                            <i class="fas fa-paint-brush"></i>
+                            <div class="text">Front-end</div>
+                            <p>I have been working on many different projects containing a good amount of frontend work.This very website is an example of that.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="box">
+                            <i class="fas fa-pencil-alt"></i>
+                            <div class="text">Back-end</div>
+                            <p>I have worked on different projects requiring backend work including APIs, firebase, web-sockets, etc.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="box">
+                            <i class="fas fa-database"></i>
+                            <div class="text">Database Management</div>
+                            <p>I have work experience with managing and organizing databases .</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="box">
+                            <i class="fas fa-video"></i>
+                            <div class="text">Video Editing</div>
+                            <p>I like editing videos a lot that is why I have been trying different video editing softwares and working for small creators.</p>
+                        </div>
                     </div>
                 </div>
-                <div class="card">
-                    <div class="box">
-                        <i class="fas fa-video"></i>
-                        <div class="text">Video Editing</div>
-                        <p>I like editing videos a lot that is why I have been trying different video editing softwares and working for small creators.</p>
-                    </div>
-                </div>
-               </div>
-            </div>
         </div>
     </section>
 
@@ -275,8 +288,6 @@
         $('.carousel').owlCarousel({
             margin: 20,
             loop: true,
-            autoplayTimeOut: 2000,
-            autoplayHoverPause: true,
             responsive: {
                 0:{
                     items: 1,

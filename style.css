@@ -37,7 +37,6 @@ section{
     font-family: 'Poppins', sans-serif;
 }
 .about .about-content,
-.services .serv-content,
 .skills .skills-content,
 .contact .contact-content{
     display: flex;
@@ -173,9 +172,9 @@ section .title::after{
     height: 100vh;
     color: #000;
     min-height: 500px;
-    background: url("./images/Weather_Forcast_App.png");
+    background: url("./images/home_background.png");
     background-repeat:no-repeat;
-    background-size:contain;
+    background-size: cover;
     background-position:center;
     font-family: 'Ubuntu', sans-serif;
 }
@@ -227,7 +226,7 @@ section .title::after{
     width: 45%;
 }
 .about .about-content .left img{
-    height: 400px;
+    height: 450px;
     width: 400px;
     object-fit: cover;
     border-radius: 6px;
@@ -403,46 +402,45 @@ section .title::after{
     text-decoration: none;
 }
                                                                         /* Services styling */
-.services .serv-content{
-    justify-content: space-evenly;
-}
 .services .title::after{
     content: "what i provide";
 }
-.services .serv-content .box div{
-    color: #fff;
-}
-.services .serv-content .card{
-    width: calc(33% - 20px);
+.services .carousel .card{
     background: linear-gradient(lightgray, gray, lightgray);
-    text-align: center;
     border-radius: 6px;
-    padding: 35px 25px;
-    cursor: pointer;
+    padding: 25px 35px;
+    height: 300px;
+    text-align: center;
+    overflow: hidden;
     transition: all 0.2s ease;
 }
-.services .serv-content .card:hover{
+.services .carousel .card:hover{
     color: white;
     background: royalblue;
 }
-.services .serv-content .card .box{
+.services .carousel .card .box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     transition: all 0.3s ease;
 }
-.services .serv-content .card:hover .box{
+.services .carousel .card:hover .box{
     transform: scale(1.05);
 }
-.services .serv-content .card i{
+.services .carousel .card .text{
+    color: white;
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+.services .carousel .card i{
     font-size: 50px;
     color: royalblue;
     transition: color 0.3s ease;
 }
-.services .serv-content .card:hover i{
+.services .carousel .card:hover i{
     color: #fff;
-}
-.services .serv-content .card .text{
-    font-size: 25px;
-    font-weight: 500;
-    margin: 10px 0 7px 0;
 }
 
                                                                     /* Contact section */
@@ -574,9 +572,16 @@ footer span a:hover{
 
 
                                                             /* Responsiveness */
+
+@media (max-width: 1263px) {
+    .home{
+        background: url('./images/home_background_2.png');
+    }
+}
+
 @media (max-width: 1104px) {
     .about .about-content .left img{
-        height: 350px;
+        height: 450px;
         width: 350px;
     }
 }
@@ -644,7 +649,7 @@ footer span a:hover{
     .about .about-content .right{
         flex: 100%;
     }
-    .services .serv-content .card{
+    .services   .card{
         width: calc(50% - 10px);
         margin-bottom: 20px;
     }
@@ -668,7 +673,7 @@ footer span a:hover{
     .home .home-content a{
         font-size: 20px;
     }
-    .services .serv-content .card{
+    .services   .card{
         width: 100%;
     }
 }
