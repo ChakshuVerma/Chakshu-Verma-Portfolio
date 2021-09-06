@@ -42,6 +42,7 @@ section{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: space-between;
 }
 section .title{
     position: relative;
@@ -274,9 +275,6 @@ section .title::after{
     font-weight: 600;
     margin-bottom: 10px;
 }
-.skills .skills-content .left p{
-    text-align: justify;
-}
 .skills .skills-content .left a{
     display: inline-block;
     background: royalblue;
@@ -453,9 +451,6 @@ section .title::after{
     font-size: 20px;
     font-weight: 600;
     margin-bottom: 10px;
-}
-.contact .contact-content .left p{
-    text-align: justify;
 }
 .contact .contact-content .left .icons{
     margin: 10px 0;
