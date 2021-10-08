@@ -354,9 +354,15 @@ section .title::after{
     justify-content: center;
     transition: all 0.3s ease;
 }
-.projects .carousel .card:hover .box{
+.projects .carousel .card:hover{
     transform: scale(1.05);
 }
+.projects .carousel .card i{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
 .projects .carousel .card .text{
     font-size: 25px;
     font-weight: 500;
