@@ -36,15 +36,9 @@
                     <i class="fas fa-bars"></i>
                 </div>
             </div>
-            <div class="progress-bar" style="background-color: #333; border-radius: 20px;">
-                <div class="progress-bar-inner" style="background-color: #FFCE00; color: #FFF; width:0; text-align: center; border-radius: 20px;"></div>
-            </div>
         </div>
     </nav>
 
-    <div class="max-width">
-        
-    </div>
     <!-- Home Section -->
     <section class="home" id="home">
       <div class="max-width">
@@ -253,24 +247,7 @@
 </body> 
 <script>
     $(document).ready(function(){
-
-        const progressbarinner = document.querySelector('.progress-bar-inner');
-
         $(window).scroll(function(){
-            
-            let h = document.documentElement;
-            let st = h.scrollTop || document.body.scrollTop;
-            let sh = h.scrollHeight || document.body.scrollHeight;
-            let scrollPercent = st/(sh-h.clientHeight)*100;
-
-            let roundedPercent = Math.round(scrollPercent);
-
-            progressbarinner.style.width = scrollPercent + "%";
-            if(roundedPercent === 0)
-                progressbarinner.innerText = "";
-            else
-                progressbarinner.innerText = roundedPercent + "%";
-
             if(this.scrollY > 20){
                 $('.navbar').addClass("sticky");
             }else{
