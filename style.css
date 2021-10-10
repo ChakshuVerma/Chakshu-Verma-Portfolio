@@ -84,13 +84,14 @@ section .title::after{
     transition: all 0.3s ease;
 }
 .navbar.sticky{
-    padding: 15px 0;
+    padding: 10px 0;
     background: royalblue;
 }
-.navbar .max-width{
+.navbar .max-width .main-content{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 10px;
 }
 .navbar .logo a{
     color: #000;
