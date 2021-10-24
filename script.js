@@ -1,4 +1,4 @@
-// Your web app's Firebase configuration
+// Firebase configuration
 var firebaseConfig = {
     apiKey: "AIzaSyCy_VLPayq4HwcpdqXZ3X2aLy4M3B0Y5I0",
     authDomain: "portfolio-contact-form-7d200.firebaseapp.com",

@@ -10,6 +10,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
 
 </head>
@@ -53,7 +54,7 @@
     </section>
 
     <!-- About Section -->
-    <section class="about" id="about">
+    <section class="about" id="about" data-aos="fade-in">
         <div class="max-width">
             <h2 class="title">About me</h2>
             <div class="about-content">
@@ -70,7 +71,7 @@
     </section>
 
     <!-- Projects Section-->
-    <section class="projects" id="projects">
+    <section class="projects" id="projects" data-aos="fade-in">
         <div class="max-width">
             <h2 class="title">My projects</h2>
             <div class="carousel owl-carousel">
@@ -111,15 +112,15 @@
     </section>
 
     <!-- Skills Section-->
-    <section class="skills" id="skills">
+    <section class="skills" id="skills" data-aos="fade-in">
         <div class="max-width">
             <h2 class="title">My skills</h2>
             <div class="skills-content">
-                <div class="column left">
+                <div class="column left" data-aos="fade-right" data-aos-delay="500">
                     <div class="text">My Skills.</div>
                     <p>In my journey, I have worked on different technologies and languages whether it be for web development, android development or for competitive programming. These are some of them.</p>
                 </div>
-                <div class="column right">
+                <div class="column right" data-aos="fade-left" data-aos-delay="1000">
                     <div class="bars">
                         <div class="info">
                             <span>C++</span>
@@ -150,6 +151,13 @@
                     </div>
                     <div class="bars">
                         <div class="info">
+                            <span>ReactJs</span>
+                            <span>70%</span>
+                        </div>
+                        <div class="line ReactJs"></div>
+                    </div>
+                    <div class="bars">
+                        <div class="info">
                             <span>MySQL</span>
                             <span>70%</span>
                         </div>
@@ -163,7 +171,7 @@
     
 
     <!-- Services Section-->
-    <section class="services" id="services">
+    <section class="services" id="services" data-aos="fade-in">
         <div class="max-width">
             <h2 class="title">My services</h2>
                 <div class="carousel owl-carousel">
@@ -200,7 +208,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section class="contact" id="contact">
+    <section class="contact" id="contact" data-aos="fade-in">
         <div class="max-width">
             <h2 class="title">Contact me</h2>
             <div class="contact-content">
@@ -243,74 +251,14 @@
     </footer>
 
     <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            offset: 50,
+            duration: 1000,
+        });
+    </script>
+    <script src="index.js"></script>
     <script src="script.js"></script>
 </body> 
-<script>
-    $(document).ready(function(){
-        $(window).scroll(function(){
-            if(this.scrollY > 20){
-                $('.navbar').addClass("sticky");
-            }else{
-                $('.navbar').removeClass("sticky");
-            }
-            
-            if(this.scrollY > 500){
-                $('.scroll-up-btn').addClass("show");
-            }else{
-                $('.scroll-up-btn').removeClass("show");
-            }
-        });
-
-        $(document).ready(function(){
-            $(this).scrollTop(0);
-        });
-        
-        $('.scroll-up-btn').click(function(){
-            $('html').animate({scrollTop: 0});
-            $('html').css("scrollBehavior", "auto");
-        });
-
-        $('.navbar .menu li a').click(function(){
-            $('html').css("scrollBehavior", "smooth");
-        });
-
-        $('.menu-btn').click(function(){
-            $('.navbar .menu').toggleClass("active");
-            $('.menu-btn i').toggleClass("active");
-        });
-
-        var typed = new Typed(".typing", {
-            strings: ["Programmer", "Web-Developer", "Designer","Video Editor"],
-            typeSpeed: 100,
-            backSpeed: 60,
-            loop: true
-        });
-
-        var typed = new Typed(".typing-2", {
-            strings: ["Programmer", "Web-Developer", "Designer","Video Editor"],
-            typeSpeed: 100,
-            backSpeed: 60,
-            loop: true
-        });
-
-        $('.carousel').owlCarousel({
-            margin: 20,
-            loop: true,
-            responsive: {
-                0:{
-                    items: 1,
-                    nav: false
-                },
-                600:{
-                    items: 2,
-                    nav: false
-                },
-                1000:{
-                    items: 3,
-                    nav: false
-                }
-            }
-        });
-});
-</script>
 </html>

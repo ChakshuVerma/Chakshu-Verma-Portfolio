@@ -243,9 +243,6 @@ section .title::after{
 .about .about-content .right .text span{
     color: royalblue;
 }
-.about .about-content .right p{
-    text-align: justify;
-}
 .about .about-content .right a{
     display: inline-block;
     background: royalblue;
@@ -326,6 +323,9 @@ section .title::after{
 }
 .skills-content .right .css::before{
     width: 80%;
+}
+.skills-content .right .ReactJs::before{
+    width: 70%;
 }
 .skills-content .right .mysql::before{
     width: 70%;
