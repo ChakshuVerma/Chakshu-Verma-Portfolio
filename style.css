@@ -566,6 +566,10 @@ footer{
     color: #fff;
     text-align: center;
 }
+footer a{
+    margin: 0px 10px;
+    color: #fff;
+}
 footer span a{
     color: white;
     text-decoration: none;
