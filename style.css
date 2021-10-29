@@ -174,7 +174,7 @@ section .title::after{
     color: #000;
     min-height: 500px;
     background: url("./images/home_background.png");
-    background-repeat:no-repeat;
+    background-repeat: no-repeat;
     background-size: cover;
     background-position:center;
     font-family: 'Ubuntu', sans-serif;
@@ -319,15 +319,18 @@ section .title::after{
     width: 90%;
 }
 .skills-content .right .js::before{
-    width: 80%;
+    width: 90%;
+}
+.skills-content .right .ReactJs::before{
+    width: 85%;
 }
 .skills-content .right .css::before{
     width: 80%;
 }
-.skills-content .right .ReactJs::before{
-    width: 70%;
-}
 .skills-content .right .mysql::before{
+    width: 85%;
+}
+.skills-content .right .MongoDB::before{
     width: 70%;
 }
 
@@ -576,7 +579,7 @@ footer span a:hover{
 
 @media (max-width: 1263px) {
     .home{
-        background: url('./images/home_background_2.png');
+        background: none;
     }
 }
 
